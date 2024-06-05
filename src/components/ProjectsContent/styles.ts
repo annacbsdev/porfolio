@@ -5,7 +5,7 @@ export const StyledProjectList = styled.div`
 
   .projects_item {
     display: flex;
-    width: 800px;
+    /* width: 800px; */
     padding: 24px 0;
     border-bottom: 2px dotted black;
 
@@ -18,61 +18,90 @@ export const StyledProjectList = styled.div`
       padding-left: 16px;
       ul {
         margin: 8px 0;
+        display: flex;
+        li {
+          background-color: lightgrey;
+          font-size: 16px;
+          margin-right: 8px;
+          border-radius: 8px;
+          padding: 4px 8px;
+        }
       }
     }
-    ul {
+
+    img {
+      width: 240px;
+      height: 180px;
+      object-fit: cover;
+      border: 2px solid black;
+      display: block;
+    }
+
+    .image_container {
+      position: relative;
+      display: inline-block;
+      width: 240px;
+      height: 180px;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
       display: flex;
-      li {
-        background-color: lightgrey;
-        font-size: 16px;
-        margin-right: 8px;
-        border-radius: 8px;
-        padding: 4px 8px;
-      }
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .overlay_link {
+      color: white;
+      font-family: 'Roboto Condensed';
+      font-size: 20px;
+      margin-top: 8px;
+      display: flex;
+      gap: 8px;
+    }
+
+    .image_container:hover .overlay {
+      opacity: 1;
     }
   }
 
-  img {
-    width: 240px;
-    height: 180px;
-    object-fit: cover;
-    border: 2px solid black;
-    display: block;
-  }
+  @media (max-width: 500px) {
+    .projects_item {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
 
-  .image_container {
-    position: relative;
-    display: inline-block;
-    width: 240px;
-    height: 180px;
-  }
+      .description {
+        text-align: center;
+        padding: 0;
 
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
+        h3 {
+          font-size: 16px;
+          margin-top: 8px;
+        }
 
-  .overlay_link {
-    color: white;
-    font-family: 'Roboto Condensed';
-    font-size: 20px;
-    margin-top: 8px;
-    display: flex;
-    gap: 8px;
-  }
+        p {
+          font-size: 14px;
+        }
 
-  .image_container:hover .overlay {
-    opacity: 1;
+        ul {
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          li {
+            font-size: 14px;
+          }
+        }
+      }
+    }
   }
 `

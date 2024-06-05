@@ -7,7 +7,7 @@ const EstiloGlobal = createGlobalStyle`
     font-family: "Roboto Mono", monospace;
     box-sizing: border-box;
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: auto;
   }
   body{
     background-image: linear-gradient(to right, ${(props) => props.theme.gradientLeft}, ${(props) => props.theme.gradientRight} );
@@ -33,6 +33,7 @@ export const BackgroundChangeContainer = styled.div`
   padding: 10px;
   border-radius: 100px;
   align-items: center;
+  overflow-y: hidden;
 
   h3 {
     font-size: 12px;

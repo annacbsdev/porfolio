@@ -32,4 +32,16 @@ export const StyledSkillsContent = styled.div`
       }
     }
   }
+
+  @media (max-width: 500px) {
+    h3 {
+      font-size: 14px;
+    }
+
+    .skillList {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      row-gap: 16px;
+    }
+  }
 `

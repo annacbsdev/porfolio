@@ -3,8 +3,12 @@ import note from '../../assets/note.png'
 
 export const StyledAboutContent = styled.div`
   background: url(${note});
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
+
+  img {
+    display: none;
+  }
 
   .objetivo {
     font-weight: bold;
@@ -35,6 +39,44 @@ export const StyledAboutContent = styled.div`
     a {
       color: white;
       text-decoration: none;
+    }
+  }
+
+  .caption {
+    font-style: italic;
+    font-size: 14px;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+
+    .caption {
+      font-size: 12px;
+    }
+
+    hr {
+      margin: 20px 0;
+    }
+
+    .skills {
+      font-size: 12px;
+    }
+
+    button {
+      font-size: 12px;
+    }
+    img {
+      display: block;
+      width: 280px;
+      margin-bottom: 16px;
+    }
+    .objetivo {
+      margin: 20px 0;
+      text-align: center;
     }
   }
 `
