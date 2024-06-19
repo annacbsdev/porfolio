@@ -1,6 +1,8 @@
 import memorygame from '../../assets/projects/memorygame.png'
 import githubimage from '../../assets/projects/github.png'
 import contactlist from '../../assets/projects/contatos.png'
+import todolist from '../../assets/projects/todolist.png'
+import disneyplus from '../../assets/projects/disneyplus.png'
 
 import { StyledProjectList } from './styles'
 import { FaEye, FaGithub } from 'react-icons/fa'
@@ -35,6 +37,26 @@ const projectsList = [
     technologies: ['React', 'styled-components'],
     description:
       'Lista de contatos interativa, com as funcionalidades de adicionar, editar e remover um contato.'
+  },
+  {
+    id: 4,
+    name: 'Lista de tarefas',
+    repository: 'https://github.com/annacbsdev/todolistpersonal',
+    site: 'https://todolist-alpha-hazel.vercel.app',
+    image: todolist,
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    description:
+      'Lista de tarefas interativa para melhor controle de atividades. Feita por conta própria para melhorar a manipulação do DOM.'
+  },
+  {
+    id: 5,
+    name: 'Clone do Disney+',
+    repository: 'https://github.com/annacbsdev/projeto-disney-plus',
+    site: 'https://projeto-disney-plus-rho.vercel.app',
+    image: disneyplus,
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Gulp'],
+    description:
+      'Site responsivo clone do Disney+, com o uso do Gulp para minificar arquivos e JavaScript para manipular elementos.'
   }
 ]
 
