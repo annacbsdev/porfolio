@@ -3,6 +3,8 @@ import githubimage from '../../assets/projects/github.png'
 import contactlist from '../../assets/projects/contatos.png'
 import todolist from '../../assets/projects/todolist.png'
 import disneyplus from '../../assets/projects/disneyplus.png'
+import eplay from '../../assets/projects/eplay.png'
+import efood from '../../assets/projects/efood.png'
 
 import { StyledProjectList } from './styles'
 import { FaEye, FaGithub } from 'react-icons/fa'
@@ -57,6 +59,26 @@ const projectsList = [
     technologies: ['HTML', 'CSS', 'JavaScript', 'Gulp'],
     description:
       'Site responsivo clone do Disney+, com o uso do Gulp para minificar arquivos e JavaScript para manipular elementos.'
+  },
+  {
+    id: 6,
+    name: 'Eplay',
+    repository: 'https://github.com/annacbsdev/eplay',
+    site: 'https://eplay-neon.vercel.app',
+    image: eplay,
+    technologies: ['React', 'Redux', 'styled-components', 'formik'],
+    description:
+      'E-commerce de jogos eletrônicos feito com React, usando Redux para manipular itens no carrinho, formik e yup para capturar e validar os dados dos formulários. '
+  },
+  {
+    id: 7,
+    name: 'Efood',
+    repository: 'https://github.com/annacbsdev/efood',
+    site: 'https://efood-sandy-sigma.vercel.app',
+    image: efood,
+    technologies: ['React', 'Redux', 'styled-components', 'formik'],
+    description:
+      'Site de e-commerce de comida utilizando API para carregar os dados dos restaurantes, Redux para manipular o carrinho, formik para capturar os dados do formulário e yup para validá-los.'
   }
 ]
 
